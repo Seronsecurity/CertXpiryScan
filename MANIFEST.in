@@ -1,0 +1,4 @@
+include README.md LICENSE CHANGELOG.md SECURITY.md CONTRIBUTING.md
+include requirements.txt requirements-gui.txt
+recursive-include fathom/assets *.html *.json
+recursive-include examples *.txt

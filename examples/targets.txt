@@ -1,0 +1,4 @@
+# FATHOM target list — one per line. hostnames, IPs, or CIDR blocks.
+example.com
+mail.example.com
+# 10.0.0.0/24

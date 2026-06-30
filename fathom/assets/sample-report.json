@@ -1,0 +1,593 @@
+{
+  "tool": "FATHOM",
+  "schedule": "CA/Browser Forum SC-081v3",
+  "verdict": {
+    "severity": "action",
+    "color": "critical",
+    "headline": "Action required",
+    "detail": "1 already expired \u00b7 4 certificates will fail before anything renews them, out of 14 found.",
+    "small_sample": false
+  },
+  "summary": {
+    "total": 14,
+    "tiers": {
+      "critical": 4,
+      "high": 1,
+      "medium": 6,
+      "low": 0,
+      "ok": 3
+    },
+    "below_waterline": 11,
+    "below_waterline_pct": 79,
+    "october_cohort": 1,
+    "breaks_at_phase2": 11,
+    "breaks_at_phase3": 14,
+    "expired": 1,
+    "expiring_30d": 2,
+    "current_phase": {
+      "label": "Phase 1 (200-day)",
+      "max_validity": 200,
+      "dcv_reuse": 200
+    },
+    "generated": "2026-06-27T15:11:42.250179+00:00",
+    "weak_key": 1,
+    "legacy_sig": 1
+  },
+  "certs": [
+    {
+      "host": "db-prod.harbor.local",
+      "port": 5432,
+      "subject_cn": "db-prod",
+      "issuer": "db-prod",
+      "not_before": "2024-07-27T14:48:57.454712+00:00",
+      "not_after": "2026-07-01T14:48:57.454712+00:00",
+      "self_signed": true,
+      "chain_trusted": false,
+      "sans": [
+        "db-prod"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "critical",
+        "score": 100,
+        "depth": 1.0,
+        "above_waterline": false,
+        "service": "PostgreSQL",
+        "is_web": false,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": 3,
+        "validity_days": 704,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Expires in 3d",
+          "Self-signed / private CA \u2014 no public automation path",
+          "PostgreSQL cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "smtp.harborcounty.gov",
+      "port": 587,
+      "subject_cn": "smtp.harborcounty.gov",
+      "issuer": "GoDaddy.com, Inc. \u2014 Go Daddy Secure Certificate Authority - G2",
+      "not_before": "2025-07-12T14:48:57.454712+00:00",
+      "not_after": "2026-07-09T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "smtp.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "critical",
+        "score": 99,
+        "depth": 0.947,
+        "above_waterline": false,
+        "service": "Submission",
+        "is_web": false,
+        "issuer_class": "manual",
+        "publicly_trusted": true,
+        "days_remaining": 11,
+        "validity_days": 362,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Expires in 11d",
+          "Manual-purchase CA \u2014 renewal is a human task",
+          "Submission cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "vpn.harborcounty.gov",
+      "port": 8443,
+      "subject_cn": "vpn.harborcounty.gov",
+      "issuer": "Fortinet Ltd. \u2014 FortiGate",
+      "not_before": "2025-05-13T14:48:57.454712+00:00",
+      "not_after": "2026-06-15T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": null,
+      "sans": [
+        "vpn.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "critical",
+        "score": 86,
+        "depth": 0.678,
+        "above_waterline": false,
+        "service": "HTTPS-alt",
+        "is_web": true,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": -13,
+        "validity_days": 398,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Expired 13d ago",
+          "Unrecognized issuer \u2014 automation posture unknown",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "ts.harbor.local",
+      "port": 3389,
+      "subject_cn": "ts.harbor.local",
+      "issuer": "ts.harbor.local",
+      "not_before": "2026-03-19T14:48:57.454712+00:00",
+      "not_after": "2026-09-15T14:48:57.454712+00:00",
+      "self_signed": true,
+      "chain_trusted": false,
+      "sans": [
+        "ts.harbor.local"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "critical",
+        "score": 64,
+        "depth": 1.0,
+        "above_waterline": false,
+        "service": "RDP",
+        "is_web": false,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": 79,
+        "validity_days": 180,
+        "october_cohort": true,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Self-signed / private CA \u2014 no public automation path",
+          "RDP cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break",
+          "Oct-2026 cohort: first 200-day batch to expire early"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "mail.harborcounty.gov",
+      "port": 993,
+      "subject_cn": "mail.harborcounty.gov",
+      "issuer": "Sectigo Limited \u2014 Sectigo RSA Domain Validation Secure Server CA",
+      "not_before": "2025-08-31T14:48:57.454712+00:00",
+      "not_after": "2026-08-31T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "mail.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 54,
+        "depth": 0.812,
+        "above_waterline": false,
+        "service": "IMAPS",
+        "is_web": false,
+        "issuer_class": "manual",
+        "publicly_trusted": true,
+        "days_remaining": 64,
+        "validity_days": 365,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Manual-purchase CA \u2014 renewal is a human task",
+          "IMAPS cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "mail.harborcounty.gov",
+      "port": 465,
+      "subject_cn": "mail.harborcounty.gov",
+      "issuer": "Sectigo Limited \u2014 Sectigo RSA DV",
+      "not_before": "2025-08-31T14:48:57.454712+00:00",
+      "not_after": "2026-08-31T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "mail.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 54,
+        "depth": 0.812,
+        "above_waterline": false,
+        "service": "SMTPS",
+        "is_web": false,
+        "issuer_class": "manual",
+        "publicly_trusted": true,
+        "days_remaining": 64,
+        "validity_days": 365,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Manual-purchase CA \u2014 renewal is a human task",
+          "SMTPS cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "dc01.internal.harbor.local",
+      "port": 636,
+      "subject_cn": "dc01.internal.harbor.local",
+      "issuer": "harbor-DC01-CA",
+      "not_before": "2025-05-23T14:48:57.454712+00:00",
+      "not_after": "2027-05-13T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": null,
+      "sans": [
+        "dc01.internal.harbor.local"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 48,
+        "depth": 0.814,
+        "above_waterline": false,
+        "service": "LDAPS",
+        "is_web": false,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": 319,
+        "validity_days": 720,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Unrecognized issuer \u2014 automation posture unknown",
+          "LDAPS cert \u2014 below the waterline, no host renews this",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "esx01.harbor.local",
+      "port": 443,
+      "subject_cn": "esx01.harbor.local",
+      "issuer": "esx01.harbor.local",
+      "not_before": "2024-01-09T14:48:57.454712+00:00",
+      "not_after": "2028-12-13T14:48:57.454712+00:00",
+      "self_signed": true,
+      "chain_trusted": false,
+      "sans": [
+        "esx01.harbor.local"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 34,
+        "depth": 0.672,
+        "above_waterline": false,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": 899,
+        "validity_days": 1800,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Self-signed / private CA \u2014 no public automation path",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "printserver.harbor.local",
+      "port": 443,
+      "subject_cn": "printserver",
+      "issuer": "printserver",
+      "not_before": "2026-05-28T14:48:57.454712+00:00",
+      "not_after": "2026-12-04T14:48:57.454712+00:00",
+      "self_signed": true,
+      "chain_trusted": false,
+      "sans": [
+        "printserver"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 34,
+        "depth": 0.672,
+        "above_waterline": false,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "unknown",
+        "publicly_trusted": false,
+        "days_remaining": 159,
+        "validity_days": 190,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Self-signed / private CA \u2014 no public automation path",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "payments.harborcounty.gov",
+      "port": 443,
+      "subject_cn": "payments.harborcounty.gov",
+      "issuer": "DigiCert Inc \u2014 DigiCert Global G2 TLS RSA SHA256 2020 CA1",
+      "not_before": "2026-06-17T14:48:57.454712+00:00",
+      "not_after": "2027-01-03T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "payments.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "medium",
+        "score": 32,
+        "depth": 0.496,
+        "above_waterline": false,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "manual",
+        "publicly_trusted": true,
+        "days_remaining": 189,
+        "validity_days": 200,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Manual-purchase CA \u2014 renewal is a human task",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "RSA",
+      "key_bits": 2048,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "legacy.harborcounty.gov",
+      "port": 443,
+      "subject_cn": "legacy.harborcounty.gov",
+      "issuer": "DigiCert Inc \u2014 DigiCert TLS RSA SHA256 2020 CA1",
+      "not_before": "2025-12-09T14:48:57.454712+00:00",
+      "not_after": "2026-12-24T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "legacy.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "high",
+        "score": 62,
+        "depth": 0.496,
+        "above_waterline": false,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "manual",
+        "publicly_trusted": true,
+        "days_remaining": 179,
+        "validity_days": 380,
+        "october_cohort": false,
+        "dies_at_phase2": true,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Manual-purchase CA \u2014 renewal is a human task",
+          "Validity exceeds the 2027 (100-day) cap \u2014 cadence will break",
+          "Weak key (RSA-1024) \u2014 below modern minimums",
+          "Legacy signature (SHA1) \u2014 deprecated for public trust"
+        ],
+        "weak_key": true,
+        "legacy_sig": true
+      },
+      "key_type": "RSA",
+      "key_bits": 1024,
+      "sig_algo": "sha1"
+    },
+    {
+      "host": "portal.harborcounty.gov",
+      "port": 443,
+      "subject_cn": "portal.harborcounty.gov",
+      "issuer": "Let's Encrypt \u2014 R10",
+      "not_before": "2026-05-18T14:48:57.454712+00:00",
+      "not_after": "2026-08-16T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "portal.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "ok",
+        "score": 10,
+        "depth": 0.03,
+        "above_waterline": true,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "acme",
+        "publicly_trusted": true,
+        "days_remaining": 49,
+        "validity_days": 90,
+        "october_cohort": false,
+        "dies_at_phase2": false,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Validity exceeds the 2029 (47-day) cap"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "EC",
+      "key_bits": 256,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "www.harborcounty.gov",
+      "port": 443,
+      "subject_cn": "www.harborcounty.gov",
+      "issuer": "Let's Encrypt \u2014 R11",
+      "not_before": "2026-06-07T14:48:57.454712+00:00",
+      "not_after": "2026-09-05T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "www.harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "ok",
+        "score": 0,
+        "depth": 0.0,
+        "above_waterline": true,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "acme",
+        "publicly_trusted": true,
+        "days_remaining": 69,
+        "validity_days": 90,
+        "october_cohort": false,
+        "dies_at_phase2": false,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Validity exceeds the 2029 (47-day) cap"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "EC",
+      "key_bits": 256,
+      "sig_algo": "sha256"
+    },
+    {
+      "host": "harborcounty.gov",
+      "port": 443,
+      "subject_cn": "harborcounty.gov",
+      "issuer": "Google Trust Services \u2014 WE1",
+      "not_before": "2026-06-22T14:48:57.454712+00:00",
+      "not_after": "2026-09-20T14:48:57.454712+00:00",
+      "self_signed": false,
+      "chain_trusted": true,
+      "sans": [
+        "harborcounty.gov"
+      ],
+      "error": null,
+      "tls_version": "TLSv1.3",
+      "assessment": {
+        "tier": "ok",
+        "score": 0,
+        "depth": 0.0,
+        "above_waterline": true,
+        "service": "HTTPS",
+        "is_web": true,
+        "issuer_class": "acme",
+        "publicly_trusted": true,
+        "days_remaining": 84,
+        "validity_days": 90,
+        "october_cohort": false,
+        "dies_at_phase2": false,
+        "dies_at_phase3": true,
+        "reasons": [
+          "Validity exceeds the 2029 (47-day) cap"
+        ],
+        "weak_key": false,
+        "legacy_sig": false
+      },
+      "key_type": "EC",
+      "key_bits": 256,
+      "sig_algo": "sha256"
+    }
+  ]
+}
