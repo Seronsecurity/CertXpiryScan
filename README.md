@@ -3,7 +3,7 @@
 **Certificate depth sounding for the CA/Browser Forum phase-down.**
 
 
-> ⚠️ **Authorized use only.** Run FATHOM only against domains, hosts, and networks you own or have explicit written permission to assess. The scan and optional brute passes make active connections to the targets. See [SECURITY.md](SECURITY.md).
+> ⚠️ **Authorized use only.** Run only against domains, hosts, and networks you own or have explicit written permission to assess. The scan and optional brute passes make active connections to the targets. See [SECURITY.md](SECURITY.md).
 
 ---
 
