@@ -19,14 +19,15 @@ verifier on Py3.13+ via get_unverified_chain). One connection per cert in the
 common case; a network fallback only where in-process validation isn't possible.  
 - **discovery**: Certificate Transparency lookups now run  **in parallel** across  
 seed domains instead of one at a time; DNS resolution uses async getaddrinfo.  
-- **discovery**: added an on-disk  **CT cache** (TTL) so repeat runs skip crt.sh.  
+- **discovery**: added an on-disk **CT cache** (TTL) so repeat runs skip crt.sh.  
 
 **Accuracy**  
 - In-process chain trust replaces the flaky opportunistic verify probe.  
 - Richer issuer classification and self-signed detection; more ports/services.
   
 **New features**  
-- CLI --csv PATH for a flat inventory; --no-cache to bypass the CT cache.  
+- CLI --csv PATH for a flat inventory;
+- --no-cache to bypass the CT cache.  
 - --ports now accepts named presets (web, mail, dir, db, remote, all)  
 alongside raw port numbers.  
 - Weak-key (RSA<2048 / EC<256 / DSA) and legacy-signature (MD5/SHA-1) detection,  
